@@ -1,0 +1,7 @@
+{
+  "name": "x-fix-aspect-ratio#gh-pages",
+  "private": true,
+  "dependencies": {
+    "x-fix-aspect-ratio": "iamlothian/x-fix-aspect-ratio#master"
+  }
+}

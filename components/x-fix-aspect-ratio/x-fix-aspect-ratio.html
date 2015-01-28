@@ -1,0 +1,80 @@
+<!--
+		@license
+		Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+		This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+		The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+		The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+		Code distributed by Google as part of the polymer project is also
+		subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element that automaticly sizes itself baced on the parent containers width and the supplied aspect ratio.
+
+##### Example
+
+		<div style="width:50%;">
+			<x-fix-aspect-ratio ratio="4:3"></x-fix-aspect-ratio>
+		</div>
+
+@element x-fix-aspect-ratio
+@blurb An element that automaticly sizes itself baced on the parent containers width and the supplied aspect ratio.
+@status alpha
+@homepage 
+-->
+<polymer-element name="x-fix-aspect-ratio" arguments="ratio">
+	<template>
+		<style>
+
+			:host {
+					display: inline-block;
+					position: relative;
+			}
+			:host > div {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+			}
+
+		</style>
+
+		<div>
+			<content></contect>      
+		</div>
+
+	</template>
+	<script>
+		Polymer('x-fix-aspect-ratio', {
+
+			publish: {
+				/**
+				 * The `ratio` attribute sets an initial ratio (w:h)
+				 *
+				 * @attribute ratio
+				 * @type string
+				 * @default '1:1'
+				 */
+				ratio: { value: '1:1', reflect: true}
+			},
+
+			domReady: function(){
+				this.ratioChanged(this.ratio,this.ratio);
+			},
+
+
+			ratioChanged: function(oldVal, newVal){
+				var ratio = newVal.split(':'),
+					w = ratio[0],
+					h = ratio[1];
+
+				this.style.width = '100%';
+				this.style.paddingBottom = (100 / w * h) + '%';
+			}
+
+		})
+	</script>
+
+</polymer-element>

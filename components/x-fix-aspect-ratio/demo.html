@@ -1,0 +1,49 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>test-element Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="x-fix-aspect-ratio.html">
+
+</head>
+<body unresolved>
+
+  <p>An example of using <code>&lt;x-fix-aspect-ratio&gt;</code>:</p>
+
+  <div style="width:20%; background-color:#EEE; margin: 5px auto;">
+    <x-fix-aspect-ratio>
+      Apect Ratio 1:1 in a 20% width container
+    </x-fix-aspect-ratio>
+  </div>
+
+  <div style="width:200px; background-color:#EEE; margin: 5px auto;">
+    <x-fix-aspect-ratio>
+      Apect Ratio 1:1 in a 200px width container
+    </x-fix-aspect-ratio>
+  </div>
+
+  <div style="width:100px; background-color:#EEE; margin: 5px auto;">
+    <x-fix-aspect-ratio ratio="2:3">
+      Apect Ratio 2:3 in a 100px width container
+    </x-fix-aspect-ratio>
+  </div>
+
+  <div style="width:50%; background-color:#EEE; margin: 5px auto;">
+    <x-fix-aspect-ratio ratio="5:3">
+      Apect Ratio 5:3 in a 50% width container
+    </x-fix-aspect-ratio>
+  </div>
+
+</body>
+</html>
