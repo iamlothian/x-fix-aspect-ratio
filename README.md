@@ -8,3 +8,5 @@ An element that automaticly sizes itself baced on the parent containers width an
 		<div style="width:50%;">
 			<x-fix-aspect-ratio ratio="4:3"></x-fix-aspect-ratio>
 		</div>
+
+checkout the [demo here.](http://iamlothian.github.io/x-fix-aspect-ratio/components/x-fix-aspect-ratio/)
