@@ -1,0 +1,28 @@
+{
+  "name": "x-fix-aspect-ratio",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "x-fix-aspect-ratio",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "aspect-ratio",
+    "x-fix-aspect-ratio"
+  ],
+  "main": "x-fix-aspect-ratio.html",
+  "license": "MIT",
+  "homepage": "https://github.com/iamlothian/x-fix-aspect-ratio/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^2.0.5"
+  }
+}
